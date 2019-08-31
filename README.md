@@ -2,6 +2,8 @@
 
 > A Vue.js project
 
+[项目效果在线预览](https://sunnytomoyo.github.io/easy-pos/#/)
+
 ## Build Setup
 
 ``` bash
