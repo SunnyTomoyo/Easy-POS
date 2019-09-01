@@ -1,6 +1,6 @@
 # easy-pos
 
-> A Vue.js project
+> 一个具有结账功能的简易系统
 
 [项目效果在线预览](https://sunnytomoyo.github.io/easy-pos/#/)
 
