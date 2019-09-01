@@ -108,7 +108,6 @@
 </template>
 
 <script>
-  //哪里使用哪里引入
   import axios from 'axios';
 
   export default {
@@ -127,18 +126,15 @@
     },
     created: function () {
       axios.get('https://www.easy-mock.com/mock/5b8b30dbf032f03c5e71de7f/kuaican/oftenGoods')
-      //成功后的操作
         .then(response => {
           console.log(response);
           this.oftenGoods = response.data;
         })
-        //失败后的操作
         .catch(error => {
           console.log(error);
           alert('网络错误，不能访问');
         });
       axios.get('https://www.easy-mock.com/mock/5b8b30dbf032f03c5e71de7f/kuaican/typeGoods')
-      //成功后的操作
         .then(response => {
           console.log(response);
           this.type0Goods = response.data[0];
@@ -146,7 +142,6 @@
           this.type2Goods = response.data[2];
           this.type3Goods = response.data[3];
         })
-        //失败后的操作
         .catch(error => {
           console.log(error);
           alert('网络错误，不能访问');
@@ -181,7 +176,7 @@
         //  根据判断的值编写业务逻辑
         if (isHave) {
           //  改变商品数量
-          let arr = this.tableData.filter(o => o.goodsId == goods.goodsId);
+          let arr = this.tableData.filter(o => o.goodsId === goods.goodsId);
           arr[0].count++;
         } else {
           let newGoods = {
@@ -223,11 +218,11 @@
           this.totalCount = 0;
           this.totalMoney = 0;
           this.$message({
-            message:"结账成功，靴靴！",
+            message:"结账成功，谢谢！",
             type:"success"
           })
         }else{
-          this.$message.error("不能空结账惹！")
+          this.$message.error("不能空结账！")
         }
       }
     },
@@ -270,7 +265,7 @@
 
   .goods-type {
     clear: both;
-    /*margin: 5px;*/
+    margin: 15px;
   }
 
   .cookList li {
@@ -310,6 +305,6 @@
   .totalDiv {
     background-color: #fff;
     padding: 10px;
-    border-bottom: 1px soild #E5E9F2;
+    border-bottom: 1px solid #E5E9F2;
   }
 </style>
