@@ -2,6 +2,8 @@
 
 > 一个简单的结账系统
 
+[项目在线预览地址](https://sunnytomoyo.github.io/easy-pos/#/)
+
 ## Build Setup
 
 ``` bash
