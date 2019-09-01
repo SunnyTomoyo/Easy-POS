@@ -1,6 +1,6 @@
-# awesomepos
+# easy-pos
 
-> A Vue.js project
+> 一个简单的结账系统
 
 ## Build Setup
 
